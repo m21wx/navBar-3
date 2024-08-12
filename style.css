@@ -1,0 +1,271 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	list-style:none;
+	text-decoration:none;
+}
+body{
+    background: #333;
+    height: 100vh;
+
+}
+main{
+	width: 90%;
+	margin:0 auto;
+	color:#fff;
+	position:relative;
+}
+nav{
+	background:#ddd;
+	width:100%;
+	height:40px;
+	position:relative;
+	padding-right: 10px;
+}
+
+.navBar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+	    justify-content: space-between;
+}
+
+.navBar .logo{
+    border-right: 2px solid green;
+    width: 100px;
+    text-align: center;
+    font-size: 22px;
+    color: green;
+    text-transform: capitalize;	
+}
+
+.navBar .muneNav{
+	width:calc(100% - 100px);
+/* 	background:yellow; */
+	display:flex;
+	align-items:center;
+
+}
+
+.navBar .muneNav .muneList{
+display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+}
+.navBar .muneNav .muneList >li{
+    color: #000000a1;
+    /* background: green; */
+    padding: 5px 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+	transition:0.5s;	
+}
+.navBar .muneNav .muneList >li:hover{
+	color:#000;
+}
+.navBar .muneNav .muneList .dropdown{
+    height: 100%;
+    position: relative;	
+}
+.navBar .muneNav .muneList .dropdown::before{
+    content: '\f107';
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: -10px;
+    font-size: 18px;
+}
+.navBar .muneNav .muneList .dropdown span{
+
+}
+
+.navBar .muneNav .muneList .dropdown .dropdownList{
+	display:none;
+    position: absolute;
+    top: 34px;
+    background: #fff;
+    width: 200px;
+    padding: 10px 0;
+	transition:0.8s;
+}
+.navBar .muneNav .muneList .dropdown:hover .dropdownList{
+		display:block;
+}
+.disabled{
+    color: #ccc!important;
+}
+.navBar .muneNav .muneList .dropdown .dropdownList> li{
+	margin: 5px 0;
+    padding: 10px;
+	transition:0.5s;
+}
+.navBar .muneNav .muneList .dropdown .dropdownList> li:hover{
+	    background: #ccc;
+}
+.navBar .muneNav .form{
+    height: 100%;
+    padding: 5px 0;
+}
+.navBar .muneNav .form input{
+    height: 30px;
+    width: 100px;
+    border: none;
+    padding: 0 5px;
+    background: #00000000;
+    box-shadow: 0 0 1px #000;
+	transition: 0.5s;
+	outline: none;
+    border: 2px solid #00000000;
+}
+.navBar .muneNav .form button{
+    height: 30px;
+    background: #00000000;
+    outline: none;
+    border: 1px solid green;
+    padding: 5px;
+    color: green;
+    transition: 0.5s;
+	cursor:pointer;
+}
+.navBar .muneNav .form input:focus{
+    width: 130px;
+    border: 2px solid #2196f3ab;
+}
+.navBar .muneNav .form button:hover{
+	color:#fff;
+	background-color:green;
+}
+
+
+
+
+
+
+
+
+
+.navBar .icons-toggle{
+    width: 50px;
+    font-size: 22px;
+    height: 100%;
+	transition: 0.8s;
+    display: none;
+}
+.navBar .icons-toggle i{
+	color:green;
+	cursor:pointer;
+}
+@media(max-width:767px){
+	.navBar .icons-toggle{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+
+
+
+
+
+header,section,footer{
+	height:50vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+
+/* .navBar.active{
+	  justify-content: space-between;
+}
+ */
+
+
+@media(max-width:767px){
+		.navBar  .muneNav{
+		position: absolute;
+		top: 40px;
+		background: #ddd;
+		width: 100%;
+		flex-direction: column;
+		height: 0;
+		overflow: hidden;
+		transition: 1s;
+	}
+	.navBar  .muneNav.activeNav{
+
+	
+		height: fit-content;
+	
+	}
+	
+	.navBar  .muneNav .muneList{
+		    flex-direction: column;
+			width: 100%;
+	}
+	.navBar .muneNav .muneList >li {
+		
+		width:100%;
+	}	
+	.navBar .muneNav .muneList .dropdown:hover .dropdownList{
+		    position: unset;
+			margin-top: 20px;
+	}
+	.navBar .muneNav .muneList .dropdown::before{
+		left: 110px;
+	}
+	.navBar .muneNav .muneList .dropdown .dropdownList{
+		
+	}
+	.navBar .muneNav .form{
+		width:100%;
+		padding:10px;
+	}
+}
+
+
+
+
+
+
+
+
+ /* 1201 بكسل وأكثر — شاشات كبيرة جدًا، تلفزيون */
+@media (min-width:1201px){
+
+
+}
+/* 769 بكسل - 1024 بكسل: الشاشات الصغيرة وأجهزة الكمبيوتر المحمولة */
+@media (max-width:1200px){
+
+
+}
+/* 769 بكسل - 1024 بكسل: الشاشات الصغيرة وأجهزة الكمبيوتر المحمولة */
+@media (max-width:1024px){
+
+}
+/* 481 بكسل - 768 بكسل: أجهزة iPad والأجهزة اللوحية */
+@media (max-width:768px){
+
+ 	
+}
+/* 320 بكسل - 480 بكسل: الأجهزة المحمولة */
+@media (max-width:480px){
+
+
+
+}
+/* End sectionMain page  */
+
+
+
+
+
+
+
+
+
